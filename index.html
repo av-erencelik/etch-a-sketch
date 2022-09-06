@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Etch A Sketch</h1>
+            <h3>Have Fun</h3>
+        </div>      
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main">
+                <div class="controls">
+                    <div class="control">
+                        <h4>Controls</h4>
+                        <form>
+                            <input type="range" min="0" max="100" value="50" id="fader" 
+                                step="1" oninput="outputUpdate(value)">
+                            <output for="fader" id="volume">50</output>
+                        </form>
+                        <button id="apply">Apply</button>
+                        <button id="delete">Delete</button>
+                    </div>
+                </div>
+                <div id="grid"></div>
+            </div>
+          
+        </div>
+    </main>
+
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
