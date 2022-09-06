@@ -1,5 +1,5 @@
 let container = document.getElementById("grid")
-
+getDivs(16)
 
 
 let applybtn = document.getElementById("apply").addEventListener("click", () => {
@@ -7,18 +7,19 @@ let applybtn = document.getElementById("apply").addEventListener("click", () => 
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+var nodes = document.getElementById('grid').getElementsByTagName("div");
+for(var i=0; i<nodes.length; i++) {
+    let node = nodes[i]
+    node.addEventListener("mouseover", function() {
+        node.style.background = "black"
+    })
+}
+let dltbtn = document.getElementById("delete").addEventListener("click",() => {
+    for(var i = 0; i < nodes.length; i++) {
+        let node = nodes[i]
+        node.style.background = "inherit"
+    }
+})
 
 
 function outputUpdate(vol) {
