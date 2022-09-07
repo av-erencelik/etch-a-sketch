@@ -1,19 +1,23 @@
 let container = document.getElementById("grid")
 getDivs(16)
-
+var nodes = document.getElementById('grid').getElementsByTagName("div");
+colorTiles()
 
 let applybtn = document.getElementById("apply").addEventListener("click", () => {
     getDivs(parseInt(document.querySelector('#volume').textContent))
+    colorTiles()
 })
 
 
-var nodes = document.getElementById('grid').getElementsByTagName("div");
-for(var i=0; i<nodes.length; i++) {
-    let node = nodes[i]
-    node.addEventListener("mouseover", function() {
-        node.style.background = "black"
-    })
+function colorTiles() {
+    for(var i=0; i<nodes.length; i++) {
+        let node = nodes[i]
+        node.addEventListener("mouseover", function() {
+            node.style.background = "black"
+        })
+    }
 }
+
 let dltbtn = document.getElementById("delete").addEventListener("click",() => {
     for(var i = 0; i < nodes.length; i++) {
         let node = nodes[i]
