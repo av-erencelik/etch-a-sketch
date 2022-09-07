@@ -21,7 +21,7 @@ function colorTiles() {
 let dltbtn = document.getElementById("delete").addEventListener("click",() => {
     for(var i = 0; i < nodes.length; i++) {
         let node = nodes[i]
-        node.style.background = "inherit"
+        node.style.background = "#fff"
     }
 })
 
